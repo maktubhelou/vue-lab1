@@ -44,12 +44,12 @@ export default {
             { 
               text: 'Hello',
               sender: 'me',
-              time: new Date(),
+              time: new Date(2018, 3, 22, 5, 23, 20, 0),
             },
             {
               text: 'What are you doing?',
               sender: 'me',
-              time: new Date(),
+              time: new Date(2018, 3, 22, 5, 23, 25, 10),
             }
           ]
         },
@@ -63,17 +63,17 @@ export default {
             { 
               text: 'Yo',
               sender: 'me',
-              time: new Date()
+              time: new Date(2018, 4, 24, 10, 33, 35, 0)
             },
             {
               text: 'Sup?',
               sender: 'me',
-              time: new Date()
+              time: new Date(2018, 4, 24, 10, 33, 40, 0)
             },
             {
               text: 'Why so silent?',
               sender: 'me',
-              time: new Date()
+              time: new Date(2018, 4, 24, 10, 33, 50, 0)
             },
           ]
         },
@@ -87,12 +87,12 @@ export default {
             { 
               text: 'Have you eaten yet?',
               sender: 'me',
-              time: new Date()
+              time: new Date(2018, 5, 20, 14, 15, 14, 0)
             },
             {
               text: 'Let\'s grab a bite?',
               sender: 'me',
-              time: new Date()
+              time: new Date(2018, 5, 20, 14, 15, 26, 0)
             },
           ]
         }

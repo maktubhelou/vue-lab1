@@ -14,10 +14,11 @@
         v-for='(message, index) in messages'
         :class="{'me': message.sender === 'me', 'you': message.sender === 'you'}"
         :key='index'> 
-      {{ message.text }}
-      <div class="time">
-      {{ message.time.toLocaleTimeString() }}
-      </div>
+          {{ message.text }}
+        <div class="time">
+          {{ message.time.toLocaleDateString() }}
+          {{ message.time.toLocaleTimeString() }}
+        </div>
       </div>
     </div>
     <div class="write">
@@ -69,7 +70,8 @@ export default {
     autoRespond() {
       this.messages.push({
         text: 'Thank you',
-        sender: 'you'
+        sender: 'you',
+        time: new Date()
       })
     }
   }
