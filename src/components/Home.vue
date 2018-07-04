@@ -13,7 +13,7 @@
             :class="{'active': person.active}" 
             @click="selectContact(index)"
           >
-              <img src="@/assets/img/profile.jpg" alt="" />
+              <img :src="`https://source.unsplash.com/64x64/?${person.image}`" alt="" />
               <span class="name">{{ person.name }}</span>
               <span class="time">{{ person.time }}</span>
               <span class="preview">{{ person.preview }}</span>
@@ -36,7 +36,7 @@ export default {
       contacts: [
         {
           name: 'Thomas Bangalter',
-          image: '@/assets/img/profile.jpg',
+          image: 'person',
           time: '2:09 PM',
           preview: 'I was wondering...',
           active: true,
@@ -55,7 +55,7 @@ export default {
         },
         {
           name: 'Mark Evans',
-          image: '@/assets/img/profile.jpg',
+          image: 'dog',
           time: '4:09 PM',
           preview: 'Vue.js is awesome...',
           active: false,
@@ -79,7 +79,7 @@ export default {
         },
         {
           name: 'Denise Thomson',
-          image: '@/assets/img/profile.jpg',
+          image: 'queen',
           time: '4:09 PM',
           preview: 'What you on about?',
           active: false,
