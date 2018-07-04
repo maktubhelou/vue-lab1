@@ -275,6 +275,11 @@ body {
   background-size: contain;
 }
 
+.time {
+  width: 40px;
+  font-size: 8px;
+}
+
 .container .right .write .write-link.send {
   margin-left: 11px;
 }

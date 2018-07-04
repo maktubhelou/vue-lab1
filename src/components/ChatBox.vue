@@ -15,6 +15,9 @@
         :class="{'me': message.sender === 'me', 'you': message.sender === 'you'}"
         :key='index'> 
       {{ message.text }}
+      <div class="time">
+      {{ message.time.toLocaleTimeString() }}
+      </div>
       </div>
     </div>
     <div class="write">
@@ -54,10 +57,11 @@ export default {
   methods: {
     sendMessage() {
       if (this.newMessage.text) {
+        this.newMessage.time = new Date();
         this.messages.push(this.newMessage);
         this.newMessage = {
           text: '',
-          sender: 'me'
+          sender: 'me',
         }
         setTimeout(this.autoRespond, 5000);
       }
