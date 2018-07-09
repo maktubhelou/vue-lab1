@@ -9,11 +9,11 @@
       <div class="conversation-start">
         <span>Today, 6:48 AM</span>
       </div>
-      <div 
-        class="bubble" 
-        v-for='(message, index) in messages'
+      <div
+        class="bubble"
+        v-for='message in messages'
         :class="{'me': message.sender === 'me', 'you': message.sender === 'you'}"
-        :key='index'> 
+        :key='message.time.toString()'>
           {{ message.text }}
         <div class="time">
           {{ message.time.toLocaleDateString() }}
@@ -40,34 +40,22 @@ export default {
         text: '',
         sender: 'me',
         time: ''
-      },
-      // messages: [
-      //   { 
-      //     text: 'Hello',
-      //     sender: 'me',
-      //     time: ''
-      //   },
-      //   {
-      //     text: 'What are you doing?',
-      //     sender: 'me',
-      //     time: ''
-      //   }
-      // ]
+      }
     }
   },
   methods: {
-    sendMessage() {
+    sendMessage () {
       if (this.newMessage.text) {
-        this.newMessage.time = new Date();
-        this.messages.push(this.newMessage);
+        this.newMessage.time = new Date()
+        this.messages.push(this.newMessage)
         this.newMessage = {
           text: '',
-          sender: 'me',
+          sender: 'me'
         }
-        setTimeout(this.autoRespond, 5000);
+        setTimeout(this.autoRespond, 5000)
       }
     },
-    autoRespond() {
+    autoRespond () {
       this.messages.push({
         text: 'Thank you',
         sender: 'you',
